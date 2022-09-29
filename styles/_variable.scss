@@ -1,0 +1,22 @@
+@import '~antd/dist/antd.css';
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: Poppins;
+    src: url("/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: Versus;
+    src: url("/fonts/Versus-Regular.otf");
+}
+
+@font-face {
+    font-family: Regave;
+    src: url("/fonts/RegaveDemibold-nRZrJ.ttf");
+}
+
+$primary_color : #098b05;
+$secondary_color : #1ec619;
+$font_familly : Poppins;
+$panel_color : #253238;
