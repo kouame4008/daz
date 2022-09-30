@@ -3,7 +3,7 @@
 const path = require('path')
 
 const nextConfig = {
-  // reactStrictMode: true,
+  reactStrictMode: true,
   swcMinify: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
@@ -13,12 +13,13 @@ const nextConfig = {
     styledComponents: true,
   },
   distDir: 'build',
-  // images: {
-  //   dangerouslyAllowSVG: true,
-  //   contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  //   loader: 'imgix',
-  //   path: '/',
-  // },
+  images: {
+    // dangerouslyAllowSVG: true,
+    // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // loader: 'imgix',
+    // path: '/',
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig

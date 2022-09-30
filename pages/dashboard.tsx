@@ -57,11 +57,8 @@ const steps = [
     },
 ];
 
-interface Iuser {
-    user ?: any 
-}
 
-const Dashboard: NextPage = ({ user }: Iuser) => {
+const Dashboard: NextPage = () => {
     const [current, setCurrent] = useState(0);
     const [chargement, setChargement] = useState(false)
 
@@ -121,7 +118,6 @@ const Dashboard: NextPage = ({ user }: Iuser) => {
                                 ))}
                             </Steps>
                             <div className="steps-content">
-
                                 {/* {steps[current].content} */}
                                 {setComponent(steps[current].content)}
                             </div>
@@ -131,26 +127,6 @@ const Dashboard: NextPage = ({ user }: Iuser) => {
             </DashboardLayout>
         </React.Fragment>
     )
-}
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    // Fetch data from external API
-
-    const user = context.req.cookies;
-
-    // Pass data to the page via props
-    if (!user) {
-        return {
-            redirect: {
-                destination: '/login',
-                permanent: false,
-            },
-        }
-    }
-
-    return {
-        props: { user },
-    }
 }
 
 export default Dashboard;

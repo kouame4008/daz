@@ -220,13 +220,3 @@ const Login: NextPage = ({ allPostsData }: propsLoginPage) => {
 
 
 export default Login;
-
-// export const getStaticProps: GetStaticProps = async (context) => {
-
-//   const allPostsData = []
-//   return {
-//     props: {
-//       allPostsData,
-//     }
-//   };
-// }
